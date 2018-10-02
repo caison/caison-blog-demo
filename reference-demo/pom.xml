@@ -9,7 +9,10 @@
 	</parent>
 
 	<dependencies>
-
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+		</dependency>
 	</dependencies>
 
 	<artifactId>reference-demo</artifactId>

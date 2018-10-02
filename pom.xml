@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.caison</groupId>
-	<artifactId>blog-demo-parent</artifactId>
-	<version>1.0.0</version>
-	<packaging>pom</packaging>
+    <groupId>org.caison</groupId>
+    <artifactId>blog-demo-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-	<name>blog-demo-parent</name>
-	<url>https://github.com/caison/caison-blog-demo</url>
-
-
-	<modules>
-		<module>reference-demo</module>
-	</modules>
+    <name>blog-demo-parent</name>
+    <url>https://github.com/caison/caison-blog-demo</url>
 
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<junit.version>4.12</junit.version>
-		<java.version>1.8</java.version>
-	</properties>
+    <modules>
+        <module>reference-demo</module>
+    </modules>
 
-	<dependencyManagement>
-		<dependencies>
 
-		</dependencies>
-	</dependencyManagement>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>4.12</junit.version>
+        <java.version>1.8</java.version>
+        <hsqldb.version>2.3.0</hsqldb.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.hsqldb</groupId>
+                <artifactId>hsqldb</artifactId>
+                <version>${hsqldb.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
