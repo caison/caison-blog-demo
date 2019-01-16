@@ -1,5 +1,5 @@
 // Copyright (c) 2007 Keith D Gregory
-package org.caison.reference.demo.phantom.pool;
+package org.caison.concurrency.demo.phantom.pool;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
