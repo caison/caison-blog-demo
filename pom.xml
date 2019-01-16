@@ -15,6 +15,7 @@
 
     <modules>
         <module>reference-demo</module>
+        <module>concurrency-demo</module>
     </modules>
 
 
@@ -31,6 +32,12 @@
                 <groupId>org.hsqldb</groupId>
                 <artifactId>hsqldb</artifactId>
                 <version>${hsqldb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

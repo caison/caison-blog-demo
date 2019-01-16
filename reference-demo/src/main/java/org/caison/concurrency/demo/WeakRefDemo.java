@@ -1,4 +1,4 @@
-package org.caison.reference.demo;
+package org.caison.concurrency.demo;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
