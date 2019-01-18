@@ -1,4 +1,4 @@
-package org.caison.concurrency.demo.lock;
+package org.caison.concurrency.demo.safety;
 
 /**
  * 功能：
