@@ -17,6 +17,7 @@
         <module>reference-demo</module>
         <module>concurrency-demo</module>
         <module>disruptor-demo</module>
+        <module>rocketmq-demo</module>
     </modules>
 
 
@@ -27,6 +28,7 @@
         <hsqldb.version>2.3.0</hsqldb.version>
         <disruptor.version>3.3.0</disruptor.version>
         <lombok.version>1.16.20</lombok.version>
+        <rocketmq-client.version>4.4.0</rocketmq-client.version>
     </properties>
 
     <dependencyManagement>
@@ -51,6 +53,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq-client.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
