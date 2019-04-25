@@ -1,4 +1,4 @@
-package org.caison.concurrency.demo.wait;
+package org.caison.reference.demo.wait;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,12 +9,12 @@ import java.util.concurrent.Executors;
  * @author ChenCaihua
  * @since 2019年01月13日
  */
-public class WaitNotifyDemo {
+public class WaitNotifyAllDemo {
 
-    private synchronized void forNotify() {
-        System.out.println("for notify begin");
-        notify();
-        System.out.println("for notify finish");
+    private synchronized void forNotifyAll() {
+        System.out.println("for notifyAll begin");
+        notifyAll();
+        System.out.println("for notifyAll finish");
     }
 
     private synchronized void forWaitA() {
@@ -36,19 +36,20 @@ public class WaitNotifyDemo {
     }
 
     public static void main(String[] args) {
-        WaitNotifyDemo waitNotifyDemo = new WaitNotifyDemo();
+        WaitNotifyAllDemo waitNotifyDemo = new WaitNotifyAllDemo();
 
         ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(waitNotifyDemo::forWaitA);
         executorService.execute(waitNotifyDemo::forWaitB);
-        executorService.execute(waitNotifyDemo::forNotify);
+        executorService.execute(waitNotifyDemo::forNotifyAll);
         /* 输出：
         for wait A begin
         for wait B begin
-        for notify begin
-        for notify finish
+        for notifyAll begin
+        for notifyAll finish
+        for wait B finish
         for wait A finish
-         */
+        */
     }
 
 }

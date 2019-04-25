@@ -1,4 +1,4 @@
-package org.caison.concurrency.demo.interrupt;
+package org.caison.reference.demo.interrupt;
 
 /**
  * 功能：

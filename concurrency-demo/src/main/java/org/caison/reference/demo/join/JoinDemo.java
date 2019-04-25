@@ -1,4 +1,4 @@
-package org.caison.concurrency.demo.join;
+package org.caison.reference.demo.join;
 
 /**
  * 功能：

@@ -16,6 +16,7 @@
     <modules>
         <module>reference-demo</module>
         <module>concurrency-demo</module>
+        <module>disruptor-demo</module>
     </modules>
 
 
@@ -24,6 +25,7 @@
         <junit.version>4.12</junit.version>
         <java.version>1.8</java.version>
         <hsqldb.version>2.3.0</hsqldb.version>
+        <disruptor.version>3.3.0</disruptor.version>
     </properties>
 
     <dependencyManagement>
@@ -38,6 +40,11 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

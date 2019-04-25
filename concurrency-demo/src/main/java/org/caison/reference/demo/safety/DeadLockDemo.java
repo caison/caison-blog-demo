@@ -1,4 +1,4 @@
-package org.caison.concurrency.demo.safety;
+package org.caison.reference.demo.safety;
 
 /**
  * 功能：
