@@ -1,4 +1,4 @@
-package org.caison.concurrency.demo.phantom;
+package org.caison.reference.demo.phantom;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
