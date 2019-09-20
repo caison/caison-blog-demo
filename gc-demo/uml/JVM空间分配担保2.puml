@@ -1,0 +1,28 @@
+@startuml
+title:   \n
+skinparam defaultFontSize 14
+start
+if (老年代最大可用的连续空间是否\n大于新生代所有对象总空间?) then (yes)
+  :进行Minor GC;
+  stop
+else (no)
+    if(HandlePromotionFailure\n参数是否设置?) then (yes)
+         if(老年代最大可用的连续空间是否大于\n平均晋升到老年代对象的平均大小?) then (\n\nyes)
+             :进行Minor GC;
+             if(老年代最大可用连续空间是否\n大于需晋升到老年代的对象大小?) then (\n\n   yes  )
+                 stop
+             else(\nno （担保失败） \n\n)
+                :进行Full GC;
+                stop
+             endif
+         else (\n\nno)
+              : 进行Full GC;
+              stop
+         endif
+    else (no)
+        : 进行Full GC;
+        stop
+    endif
+endif
+
+@enduml

@@ -59,12 +59,12 @@ public class WeakRefDemo {
         key1 = null;
 
         System.out.println(
-                "before: gc weakHashMap = " + weakHashMap + " , size=" + weakHashMap.size());
+                " before: gc weakHashMap = " + weakHashMap + " , size=" + weakHashMap.size());
 
         // 通知JVM的gc进行垃圾回收
         System.gc();
         System.out.println(
-                "after: gc weakHashMap = " + weakHashMap + " , size=" + weakHashMap.size());
+                " after: gc weakHashMap = " + weakHashMap + " , size=" + weakHashMap.size());
     }
 
     /**
@@ -72,11 +72,11 @@ public class WeakRefDemo {
      */
     private static void simpleUseWeakRefDemo() {
         WeakReference<String> sr = new WeakReference<>(new String("hello world "));
-        System.out.println("before gc -> " + sr.get());
+        System.out.println(" before gc -> " + sr.get());
 
         // 通知JVM的gc进行垃圾回收
         System.gc();
-        System.out.println("after gc -> " + sr.get());
+        System.out.println(" after gc -> " + sr.get());
     }
 
     public static void main(String[] args) {

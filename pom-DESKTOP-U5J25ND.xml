@@ -18,7 +18,6 @@
         <module>concurrency-demo</module>
         <module>disruptor-demo</module>
         <module>rocketmq-demo</module>
-        <module>gc-demo</module>
     </modules>
 
 
