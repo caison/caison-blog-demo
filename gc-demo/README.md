@@ -82,7 +82,7 @@ Full GC前后打印跟踪类视图
 # CMS/G1通用开关设置
 
 ### -XX:+DisableExplicitGC
-设置忽略System.gc()的调用，不建议设置该参数，Java NIO需要基于显示调用System.gc()来触发Full GC，将负责堆外内存清理的Cleaner对象加入虚引用队列(ReferenceQueue)，同时触发Cleaner对象的clean方法回收堆外内存，设置该参数之后会导致堆外内存得不到清理
+设置忽略System.gc()的调用，不建议设置该参数，部分依赖Java NIO的框架(例如Netty)在内存异常耗尽时，会使用主动调用System.gc()作为作为最后保障进制，触发Full GC，回收DirectByteBuffer对象，从而回收堆外内存，设置该参数之后会导致堆外内存得不到清理
 参考：[为什么不推荐使用-XX:+DisableExplicitGC](https://www.ezlippi.com/blog/2017/10/why-not-expliclitgc.html)
 
 ### -XX:+ParallelRefProcEnabled
