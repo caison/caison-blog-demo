@@ -1,0 +1,14 @@
+@startuml
+title:   磁盘I/O读写数据\n
+
+participant 服务端应用进程 as yy
+participant 系统内核 as nh
+participant DMA控制器 as dma
+
+participant 网卡 as cp
+
+== I/O读数据==
+autonumber
+
+yy -> nh :recvfrom : 阻塞等待
+@enduml
