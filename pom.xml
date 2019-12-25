@@ -19,6 +19,9 @@
         <module>disruptor-demo</module>
         <module>rocketmq-demo</module>
         <module>gc-demo</module>
+        <module>io-demo</module>
+        <module>netty-demo</module>
+        <module>sentinel-demo</module>
     </modules>
 
 
@@ -30,6 +33,7 @@
         <disruptor.version>3.3.0</disruptor.version>
         <lombok.version>1.16.20</lombok.version>
         <rocketmq-client.version>4.4.0</rocketmq-client.version>
+        <netty.version>4.1.43.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -59,6 +63,11 @@
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,4 +1,4 @@
-package org.caison.springboot.sentineldemo;
+package org.caison.springboot.sentinel.demo;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.web.bind.annotation.GetMapping;

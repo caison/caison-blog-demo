@@ -1,4 +1,4 @@
-package org.caison.springboot.sentineldemo;
+package org.caison.springboot.sentinel.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

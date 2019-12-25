@@ -10,9 +10,9 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>io-demo</artifactId>
+    <artifactId>netty-demo</artifactId>
     <packaging>jar</packaging>
-    <name>io-demo</name>
+    <name>netty-demo</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>

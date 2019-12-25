@@ -1,0 +1,19 @@
+@startuml
+
+title:   查找可用空闲内存
+start
+if (memoryMap[id] > d) then(yes)
+    : 当前chunk无可用内存;
+    : 查找失败;
+    stop;
+else(no)
+if (memoryMap[id] == d \nAND depth_of_id == h) then(yes)
+    : memoryMap[id] = max_order + 1;
+    : 遍历当前节点的父节点和所有祖先节点，\n更新节点值为各自的左右节点值的最小值;
+    : 查找成功，返回id;
+    stop;
+
+if (memoryMap[id] <= d \nAND depth_of_id < h) then(yes)
+   if (memoryMap[2 * id] <=d)
+
+@enduml
