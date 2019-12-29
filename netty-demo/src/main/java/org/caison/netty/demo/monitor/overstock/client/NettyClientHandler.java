@@ -1,4 +1,4 @@
-package org.caison.netty.demo.monitor.overstock;
+package org.caison.netty.demo.monitor.overstock.client;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFutureListener;

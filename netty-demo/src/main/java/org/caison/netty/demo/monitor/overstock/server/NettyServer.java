@@ -1,4 +1,4 @@
-package org.caison.netty.demo.monitor.overstock;
+package org.caison.netty.demo.monitor.overstock.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
@@ -26,7 +26,8 @@ public class NettyServer {
                 .childOption(ChannelOption.TCP_NODELAY, true)
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     protected void initChannel(NioSocketChannel ch) {
-                        ch.pipeline().addLast(new NettyServerHandler());
+                        ch.pipeline().addLast(new NettyServerHandler())
+                        .addLast(new MonitorHandler());
                     }
                 });
 

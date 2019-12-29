@@ -1,4 +1,4 @@
-package org.caison.netty.demo.monitor.overstock;
+package org.caison.netty.demo.monitor.overstock.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelInitializer;
@@ -38,7 +38,7 @@ public final class NettyClient {
                     }
                 });
 
-        for (int i = 0; i < 100; ++i) {
+        for (int i = 0; i < 1; ++i) {
             bootstrap.connect(HOST, PORT).addListener(future -> {
                 if (future.isSuccess()) {
                     System.out.println("连接成功!");

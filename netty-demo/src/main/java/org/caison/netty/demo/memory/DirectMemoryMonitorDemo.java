@@ -2,6 +2,7 @@ package org.caison.netty.demo.memory;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.PooledByteBufAllocator;
+import io.netty.buffer.UnpooledByteBufAllocator;
 import io.netty.util.internal.PlatformDependent;
 import sun.management.ManagementFactoryHelper;
 import sun.nio.ch.DirectBuffer;
@@ -23,8 +24,8 @@ public class DirectMemoryMonitorDemo {
     private static final int PAGE_SIZE = CHUNK_SIZE / 2048;
     private static final int ONE_MB = 1024 * 1024;
 
-    private static final int sleepWhenStartAndStop = 15000;
-    private static final int sleepWhenRun = 2000;
+    private static final int sleepWhenStartAndStop = 150;
+    private static final int sleepWhenRun = 20;
 
     private static List<ByteBuf> byteBufList = new ArrayList<>();
     private static List<ByteBuffer> byteBufferList = new ArrayList<>();
@@ -50,7 +51,7 @@ public class DirectMemoryMonitorDemo {
     private static void monitorByteBuf() throws InterruptedException {
 
         for (int i = 0; i < 5; ++i) {
-            byteBufList.add(PooledByteBufAllocator.DEFAULT.buffer(ONE_MB));
+            byteBufList.add(UnpooledByteBufAllocator.DEFAULT.buffer(ONE_MB));
             Thread.sleep(sleepWhenRun);
             System.out.println("[noCleaner分配] 堆外内存占用 " +   PlatformDependent.usedDirectMemory());
         }
@@ -58,6 +59,7 @@ public class DirectMemoryMonitorDemo {
         for (ByteBuf byteBuf : byteBufList) {
             Thread.sleep(sleepWhenRun);
             byteBuf.release();
+
             System.out.println("[noCleaner释放] 堆外内存占用 " +   PlatformDependent.usedDirectMemory());
         }
     }
